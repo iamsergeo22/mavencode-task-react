@@ -3,7 +3,6 @@ import { Routes, Route, useLocation } from 'react-router-dom';
 import Loader from './common/Loader';
 import PageTitle from './components/PageTitle';
 import SignIn from './pages/Authentication/SignIn';
-import SignUp from './pages/Authentication/SignUp';
 import Home from './pages/Dashboard/Home';
 import DefaultLayout from './layout/DefaultLayout';
 import ProtectedRoute from './components/ProtectedRoute/ProtectedRoute';
@@ -37,15 +36,7 @@ function App() {
               </>
             }
           />
-          <Route
-            path="/auth/signup"
-            element={
-              <>
-                <PageTitle title="Signup" />
-                <SignUp />
-              </>
-            }
-          />
+        
         </Routes>
       ) : (
         <DefaultLayout>
