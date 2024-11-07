@@ -18,6 +18,7 @@ const Header = () => {
   // Handle logout and reload page
   const handleLogout = () => {
     dispatch(logoutRequest()); // Dispatch logout action
+    localStorage.removeItem('authToken');
     navigate('/auth/signin'); // Navigate to the sign-in page
   };
 
